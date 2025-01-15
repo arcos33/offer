@@ -1,6 +1,6 @@
 import Foundation
 
-struct ZillowResponse: Codable {
+struct ZillowPropertyResponse: Codable {
     // Private container for price history
     private let priceHistoryContainer: PriceHistoryContainer?
     private let taxHistoryContainer: TaxHistoryContainer?
