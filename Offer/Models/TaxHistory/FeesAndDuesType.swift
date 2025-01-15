@@ -1,0 +1,23 @@
+//
+//  FeesAndDuesType.swift
+//  Offer
+//
+//  Created by arkos33 on 1/14/25.
+//
+
+
+enum FeesAndDuesType: Codable {
+    case dictionary([String: String])
+    case array([FeeDue])
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let dict = try? container.decode([String: String].self) {
+            self = .dictionary(dict)
+        } else if let array = try? container.decode([FeeDue].self) {
+            self = .array(array)
+        } else {
+            self = .dictionary([:])
+        }
+    }
+}

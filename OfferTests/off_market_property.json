@@ -1,0 +1,34 @@
+{
+    "buildingPermits": null,
+    "homeStatus": "OTHER",
+    "datePosted": "",
+    "listingSubType": {
+        "is_FSBA": false,
+        "is_comingSoon": false,
+        "is_newHome": false,
+        "is_pending": false,
+        "is_forAuction": false,
+        "is_foreclosure": false,
+        "is_bankOwned": false,
+        "is_openHouse": false,
+        "is_FSBO": false
+    },
+    "priceHistory": {},
+    "zpid": 333092877,
+    "streetAddress": "123 Test Street",
+    "city": "Test City",
+    "state": "TS",
+    "zipcode": "12345",
+    "homeType": "SINGLE_FAMILY",
+    "price": 574000,
+    "bedrooms": 4,
+    "bathrooms": 2.5,
+    "livingArea": 2436,
+    "url": "/homedetails/test",
+    "description": "This is a test property",
+    "resoFacts": {
+        "flooring": [],
+        "feesAndDues": [],
+        "constructionMaterials": []
+    }
+}
