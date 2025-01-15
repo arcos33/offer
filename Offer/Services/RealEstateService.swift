@@ -128,7 +128,7 @@ class RealEstateService {
                 }
                 return result.data
             }
-            .decode(type: ZillowResponse.self, decoder: JSONDecoder())
+            .decode(type: ZillowPropertyResponse.self, decoder: JSONDecoder())
             .mapError { error in
                 if let decodingError = error as? DecodingError {
                     switch decodingError {

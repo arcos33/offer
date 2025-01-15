@@ -13,7 +13,7 @@ class PropertyStatusTests: XCTestCase {
         // GIVEN - Load the JSON file
         let jsonData = try loadJSONFromFile(named: "off_market_property")
         let decoder = JSONDecoder()
-        let zillowResponse = try decoder.decode(ZillowResponse.self, from: jsonData)
+        let zillowResponse = try decoder.decode(ZillowPropertyResponse.self, from: jsonData)
         
         // WHEN - Determine the property status
         let status = PropertyStatusChecker.determineStatus(
