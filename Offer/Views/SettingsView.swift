@@ -37,6 +37,7 @@ struct SettingsView: View {
         .sheet(isPresented: $viewModel.isShowingPhotoPicker) {
             UnsplashPhotoPickerView(isPresented: $viewModel.isShowingPhotoPicker, didSelectPhotos: viewModel.didSelectPhotos)
         }
+        .draggableDebugViewName("SettingView")
     }
 }
 

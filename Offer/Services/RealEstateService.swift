@@ -100,7 +100,7 @@ class RealEstateService {
             .eraseToAnyPublisher()
     }
 
-    func getPropertyDetails(withZPID zpid: Int) -> AnyPublisher<Zillow, Error> {
+    func getPropertyDetails(withZPID zpid: Int) -> AnyPublisher<ZillowProperty, Error> {
         let headers = [
             "x-rapidapi-host": "zillow-com1.p.rapidapi.com",
             "x-rapidapi-key": "9652b9feb3msh1a6581042834538p1dd939jsn3185123922f9"
@@ -146,7 +146,7 @@ class RealEstateService {
                 }
                 return error
             }
-            .tryMap { response -> Zillow in
+            .tryMap { response -> ZillowProperty in
                 let status = PropertyStatusChecker.determineStatus(
                     homeStatus: response.homeStatus ?? "",
                     datePosted: response.datePosted ?? "",
@@ -165,7 +165,7 @@ class RealEstateService {
                     zestimate: response.zestimate
                 )
                 
-                return Zillow(
+                return ZillowProperty(
                     id: UUID(),
                     zpid: response.zpid,
                     homeStatus: response.homeStatus ?? "",

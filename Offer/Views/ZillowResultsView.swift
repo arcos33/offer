@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ZillowResultsView: View {
     let searchAddress: String
-    let properties: [Zillow]  // NEW: Accept properties directly instead of using ViewModel
+    let properties: [ZillowProperty]  // NEW: Accept properties directly instead of using ViewModel
     
     var body: some View {
         VStack {
@@ -41,7 +41,7 @@ struct ZillowResultsView: View {
 
 // NEW: Separate view for property cards
 struct PropertyCardView: View {
-    let property: Zillow
+    let property: ZillowProperty
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {

@@ -16,7 +16,7 @@ struct PropertySearchView: View {
     @State private var searchAddress = ""
     @State private var shouldNavigate = false
     @State private var isLoading = false
-    @State private var zillowResults: [Zillow] = []
+    @State private var zillowResults: [ZillowProperty] = []
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -96,6 +96,7 @@ struct PropertySearchView: View {
                 }
             }
         }
+        .draggableDebugViewName("PropertySearchView")
     }
 }
 

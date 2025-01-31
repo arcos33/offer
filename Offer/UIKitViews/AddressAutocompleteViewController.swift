@@ -14,7 +14,7 @@ struct AddressAutocompleteView: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @Binding var shouldShowResults: Bool
     @Binding var searchAddress: String
-    @Binding var zillowResults: [Zillow]
+    @Binding var zillowResults: [ZillowProperty]
     @Binding var showAlert: Bool
     @Binding var alertMessage: String
     
@@ -31,7 +31,7 @@ struct AddressAutocompleteView: UIViewControllerRepresentable {
             print("Selected address: \(addressString)")
             
             RealEstateService.shared.getZillowIDWith(address: addressString)
-                .flatMap { zpids -> AnyPublisher<[Zillow], RealEstateServiceError> in
+                .flatMap { zpids -> AnyPublisher<[ZillowProperty], RealEstateServiceError> in
                     print("Found \(zpids.count) properties, fetching details...")
                     
                     let publishers = zpids.map { zpid in

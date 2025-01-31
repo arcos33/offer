@@ -21,6 +21,7 @@ struct PropertiesView: View {
             }
             .navigationTitle("Properties")
         }
+        .draggableDebugViewName("PropertiesView")
     }
 }
 

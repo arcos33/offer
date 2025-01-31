@@ -23,6 +23,7 @@ struct AcknowledgementsView: View {
                 }
             }
         }
+        .draggableDebugViewName("AcknowledgementsView")
         .navigationTitle("Acknowledgements")
     }
 }

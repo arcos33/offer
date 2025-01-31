@@ -12,5 +12,6 @@ struct PropertyDetailView: View {
 
     var body: some View {
         Text("Details for \(property.addressLine1)")
+            .draggableDebugViewName("PropertyDetailView")
     }
 }

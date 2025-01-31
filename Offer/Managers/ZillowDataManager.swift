@@ -10,7 +10,7 @@ class ZillowDataManager {
     
     private init() {}
     
-    func saveZillow(_ zillow: Zillow) {
+    func saveZillow(_ zillow: ZillowProperty) {
         // Implement SwiftData saving logic here
         // Example: SwiftData.save(zillow)
     }

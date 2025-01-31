@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Zillow: Identifiable, Codable, Equatable {
+struct ZillowProperty: Identifiable, Codable, Equatable {
     let id: UUID
     let zpid: Int
     let homeStatus: String
@@ -31,7 +31,7 @@ struct Zillow: Identifiable, Codable, Equatable {
     let propertyStatus: PropertyStatus
     
     // NEW: Add static func == for Equatable conformance
-    static func == (lhs: Zillow, rhs: Zillow) -> Bool {
+    static func == (lhs: ZillowProperty, rhs: ZillowProperty) -> Bool {
         return lhs.id == rhs.id &&
                lhs.zpid == rhs.zpid &&
                lhs.homeStatus == rhs.homeStatus &&

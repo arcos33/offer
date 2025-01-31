@@ -8,7 +8,7 @@
 import Combine
 
 class ZillowResultsViewModel: ObservableObject {
-    @Published var properties: [Zillow] = []
+    @Published var properties: [ZillowProperty] = []
     @Published var error: RealEstateServiceError?
     @Published var isLoading = false
     
